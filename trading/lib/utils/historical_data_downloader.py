@@ -21,7 +21,7 @@ stock_final = pd.DataFrame()
 # try:
 #     # download the stock price
 stock = []
-stock = yf.download("TSLA", start=start, end=end, progress=False)
+stock = yf.download("TSLA", period='5d', progress=False, interval='5m')
 
 # append the individual stock prices
 if len(stock) == 0:
